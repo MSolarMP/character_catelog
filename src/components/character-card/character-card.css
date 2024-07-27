@@ -1,0 +1,52 @@
+.russo-one-regular {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'genshin';
+    src: url('../../../src/fonts/genshin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.card {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.options {
+    color: white;
+    font-size: 20px;
+    padding: 20px 40px;
+}
+
+.characterNameInverse {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    font-size: 190px;
+    padding-left: 40px;
+}
+
+.characterName {
+    position: relative;
+    z-index: 2;
+    top: -112px;
+    color: white;
+    font-size: 82px;
+    padding-left: 40px;
+}
+
+.description {
+    font-family: 'genshin', sans-serif;
+    position: relative;
+    top: -110px;
+    color: white;
+    width: 390px;
+    font-size: 12px;
+    padding-left: 40px;
+    padding-top: 10px;
+}
