@@ -5,7 +5,7 @@ import CharacterCard from "../../components/character-card/character-card";
 const Dashboard: React.FC = () => {
 
     return (
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column'}}>
             <CharacterCard></CharacterCard>
         </div>
     );

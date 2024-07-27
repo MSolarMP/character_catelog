@@ -18,7 +18,23 @@
     border-radius: 20px;
 }
 
+.transparentSection {
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+}
+
+.contentSection {
+    background-color: rgb(20 19 19);
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+}
+
 .options {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
     color: white;
     font-size: 20px;
     padding: 20px 40px;
@@ -49,4 +65,11 @@
     font-size: 12px;
     padding-left: 40px;
     padding-top: 10px;
+}
+
+.imageContainer {
+    position: absolute;
+    bottom: -3px;
+    right: -40px;
+    z-index: 10;
 }

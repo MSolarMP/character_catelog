@@ -6,9 +6,9 @@ import '../../../src/fonts/genshin.ttf'
 const CharacterCard: React.FC = () => {
     return (
         <div className="card russo-one-regular">
-            <div style={{ backgroundColor: 'transparent', width: '100%', height: '40px' }}></div>
-            <div style={{ backgroundColor: 'rgb(20 19 19)', width: '100%', height: 'calc(100% - 40px)', position: 'relative' }}>
-                <div className="options" style={{ display: "flex", flexDirection: "row", gap: "120px" }}>
+            <div className="transparentSection"></div>
+            <div className="contentSection">
+                <div className="options">
                     <div>
                         CHARACTER
                     </div>
@@ -21,7 +21,7 @@ const CharacterCard: React.FC = () => {
                 <div className="description">
                     A perky, straightforward girl, who is also the only Outrider of the Knights of Favonius. Her amazing mastery of the glider has made her a three-time winner of the Gliding Championship in Mondstadt. As a rising star within the Knights of Favonius, Amber is always ready for any challenging tasks.
                 </div>
-                <div style={{ position: 'absolute', bottom: '-3px', right: '-40px', zIndex: '10' }}>
+                <div className="imageContainer">
                     <img src={characterImage} alt="Character" style={{ height: '500px' }} />
                 </div>
             </div>
