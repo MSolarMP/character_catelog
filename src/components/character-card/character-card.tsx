@@ -1,9 +1,15 @@
 import React from 'react';
-import characterImage from '../../assets/images/characters/amber-genshin-half.png';
-import './character-card.css'
-import '../../../src/fonts/genshin.ttf'
+import './character-card.css';
 
-const CharacterCard: React.FC = () => {
+interface CharacterCardProps {
+    name: string;
+    description: string;
+    image: string;
+    element: string;
+    elementIcon: string;
+}
+
+const CharacterCard: React.FC<CharacterCardProps> = ({ name, description, image, element,elementIcon }) => {
     return (
         <div className="card russo-one-regular">
             <div className="transparentSection"></div>
@@ -16,13 +22,18 @@ const CharacterCard: React.FC = () => {
                         BACKSTORY
                     </div>
                 </div>
-                <div className="characterNameInverse">AMBER</div>
-                <div className="characterName">AMBER</div>
+                <div className="characterNameInverse">{name}</div>
+                <div className="characterName">{name}</div>
                 <div className="description">
-                    A perky, straightforward girl, who is also the only Outrider of the Knights of Favonius. Her amazing mastery of the glider has made her a three-time winner of the Gliding Championship in Mondstadt. As a rising star within the Knights of Favonius, Amber is always ready for any challenging tasks.
+                    {description}
                 </div>
                 <div className="imageContainer">
-                    <img src={characterImage} alt="Character" style={{ height: '500px' }} />
+                    <img src={image} alt={name} style={{ height: '500px' }} />
+                </div>
+
+                <div className="iconContainer">
+                    <div style = {{ paddingTop: '12px' }}>{element}</div>
+                    <img src={elementIcon} alt={name} style={{ height: '60px' }} />
                 </div>
             </div>
         </div>

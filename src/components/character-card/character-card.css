@@ -73,3 +73,16 @@
     right: -40px;
     z-index: 10;
 }
+
+.iconContainer {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 6px;
+    right: 335px;
+    z-index: 11;
+}
