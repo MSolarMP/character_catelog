@@ -71,18 +71,8 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ name, description, image,
         return (
             <div className="options">
                 <div onClick={handleFlipBack} style = {{ cursor: 'pointer' }}>
-                    OVERVIEW
+                    CHARACTER CARD
                 </div>
-                {flipOption === 'ABILITIES' && (
-                    <div onClick={() => handleFlip('BACKSTORY')} style = {{ cursor: 'pointer' }}>
-                        DETAILS
-                    </div>
-                )}
-                {flipOption === 'DETAILS' && (
-                    <div onClick={() => handleFlip('ABILITIES')} style = {{ cursor: 'pointer' }}>
-                        ABILITIES
-                    </div>
-                )}
             </div>
         );
     };
