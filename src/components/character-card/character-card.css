@@ -15,7 +15,7 @@
     width: 1000px;
     height: 500px;
     position: relative;
-    border-radius: 20px;
+    perspective: 1000px;
 }
 
 .transparentSection {
@@ -29,6 +29,29 @@
     width: 100%;
     height: calc(100% - 40px);
     position: relative;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.backSection {
+    background-color: rgb(20 19 19);
+    width: 100%;
+    height: calc(100% - 40px);
+    position: absolute;
+    top: 40px;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+}
+
+.flipped .contentSection {
+    transform: rotateY(180deg);
+}
+
+.flipped .backSection {
+    transform: rotateY(0deg);
 }
 
 .options {
@@ -67,6 +90,10 @@
     padding-top: 10px;
 }
 
+.backContent {
+    padding: 20px 40px;
+}
+
 .imageContainer {
     position: absolute;
     bottom: -3px;
@@ -74,9 +101,24 @@
     z-index: 10;
 }
 
-.iconContainer {
-    font-size: 20px;
+.characterCard {
+    position: absolute;
+    bottom: -4px;
+    right: 6px;
+    z-index: 10;
+}
+
+.details {
+    padding: 20px 40px;
+    font-family: 'genshin', sans-serif;
     color: white;
+    width: 420px;
+}
+
+.iconContainer {
+    color: white;
+    font-family: 'genshin', sans-serif;
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,4 +127,26 @@
     bottom: 6px;
     right: 335px;
     z-index: 11;
+}
+
+.abilityContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.abilityImageName {
+    font-family: 'genshin', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.abilityDescription {
+    font-family: 'genshin', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
